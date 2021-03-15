@@ -6,3 +6,8 @@ Feature: sample karate test script
     Given url 'https://jsonplaceholder.typicode.com'
     When method get
     Then status 200
+    
+  @uiTest
+  Scenario: Open google page
+   * print 'test'
+  
