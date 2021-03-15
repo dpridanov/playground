@@ -9,5 +9,11 @@ Feature: sample karate test script
     
   @uiTest
   Scenario: Open google page
-   * print 'test'
+    * configure driver = { type: 'chrome', executable: 'chrome' }
+  
+   * def testUrl = "http://google.com"
+   
+   Given driver testUrl
+   Then maximize()
+   And waitUntil("document.readyState == 'complete'")
   
