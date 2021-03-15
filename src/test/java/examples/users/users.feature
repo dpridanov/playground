@@ -9,7 +9,7 @@ Feature: sample karate test script
     
   @uiTest
   Scenario: Open google page
-    * configure driver = { type: 'chrome', executable: 'google-chrome', headless: true, pollAttempts: 5 }
+    * configure driver = { type: 'chrome', executable: 'google-chrome', headless: true, pollAttempts: 5, addOptions: ['--no-sandbox'] }
   
    * def testUrl = "http://google.com"
    
